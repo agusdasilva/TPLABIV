@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+body{
+  display: flex;
+  margin: 0;
+}
+.opciones {
+  background-color: #E7E5DF;
+  width: 15rem;
+  height: 45rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #111;
+  border-top: 0px;
+}
+
+button {
+  margin-top: 30px;
+  font-size: medium;
+  border: 2px solid #111;
+  width: 10rem;
+  background: transparent;
+  padding: 0px;
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+h2{
+  transition: opacity 0.3s ease-in-out;
+}
+button:hover h2{
+  opacity: 0;
+}
+button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+button:before {
+  content: attr(data-hover);
+  position: absolute;
+  color: #E7E5DF;
+  background-color: #2F243A;
+  /*top: 1.1em;*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  padding-top: 27px;
+  /*letter-spacing: 3px;*/
+  font-weight: 800;
+  font-size: .8em;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all .3s ease-in-out;
+}
+
+button div {
+  text-transform: uppercase;
+  /*letter-spacing: 3px;*/
+  font-weight: 800;
+  font-size: .8em;
+  transition: all .3s ease-in-out;
+}
+
+button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+
+section.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+a:hover {
+  border-bottom: 1px solid #111;
+}

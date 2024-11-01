@@ -1,0 +1,27 @@
+@import url("../../Assets/variables.css");
+header{
+    background-color: #E7E5DF;
+    width: 119rem;
+    height: 10rem;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border: 2px solid #111;
+}
+h1{
+    margin-right: 70rem;
+   width: 20rem;
+}
+.Users{
+    background-color: aliceblue;
+    width: 20%;
+    height: 3rem;
+    margin-right: 2rem;
+    border-color: black;
+}
+legend{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 2rem;
+}

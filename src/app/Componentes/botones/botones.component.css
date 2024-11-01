@@ -1,0 +1,30 @@
+.BotonPrincipal{
+    background: rgb(76, 76, 237);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 10rem;
+    height: 3rem;
+    border: 2px solid rgb(252, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    justify-content: center;
+}
+.BotonPrincipal:hover{
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.BotonPrincipal:active{
+    background-color: rgb(43, 43, 122);
+}
+body{
+    background: yellow;
+    width: 15rem;
+    height: 45rem;
+    margin-top: 10rem;
+    position: absolute;
+    margin: 0;
+    
+}
