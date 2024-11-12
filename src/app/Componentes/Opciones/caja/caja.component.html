@@ -1,3 +1,35 @@
 <body>
-    
+    <div>
+        <div class="row">
+            <label for="Entrada">Agregar dinero</label>
+            <input [(ngModel)]="entrada" class="entrada" type="text" id="Entrada">
+            <button (click)="agregarFila('Agregar')" data-hover= "Confirmar"><h2>Agregar</h2></button>
+        </div>
+        <div class="row">
+            <label for="Salida">Quitar dinero</label>
+            <input [(ngModel)]="salida" class="salida" type="text" id="Salida">
+            <button (click)="agregarFila('Salida')" data-hover= "Confirmar"><h2>Retirar</h2></button>
+        </div>
+        <div class="row">
+            <label for="Nota">Nota(Opcional)</label>
+            <input [(ngModel)]="nota" class="nota" type="text" id="Nota">
+            <button data-hover="Confirmar"><h2>Nota</h2></button>
+        </div>
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Tipo</th>
+                <th>Monto</th>
+                <th>Usuario</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            <tr *ngFor="let fila of datos| slice:0:limiteFilas" >
+            <td *ngFor="let dato of fila">{{ dato }}</td>
+        </tbody>
+    </table>
 </body>

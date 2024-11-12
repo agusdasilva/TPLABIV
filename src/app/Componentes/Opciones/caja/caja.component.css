@@ -1,10 +1,120 @@
 body{
 background-color: #2F243A;
-width: 108rem;
-height: 45rem;
+height: 80vh;
+width: 86vw;
 display: flex;
-border: 2px solid #111;
+border: 0.21vh solid #111;
 border-top: 0px;
 border-left: 0px;
 margin: 0;
 }
+table{
+    background-color: white;
+    width: 40vw;
+    height: 60vh;
+    margin-left: 13vw;
+    margin-top: 10vh;
+    border: 0.21vh solid #111;
+    justify-content: center;
+}
+tr{
+    font-size: 2vw;
+}
+
+div {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: flex-start;
+    gap: 0; /* Espacio entre las filas */
+    padding: 2vw;
+    color: white;
+}
+
+label, input {
+    font-size: 1.5vw;
+    width: 15vw;
+    height: 5vh;
+}
+label{
+    margin-top: 0vh;
+}
+input{
+    border: 0.21vh solid #111;
+}
+
+.row {
+    display: flex;
+    align-items: center; /* Alinea el label y el input en el centro vertical */
+    gap: 0vh; /* Espacio entre label y input */
+}
+
+button {
+    margin-top: 0.5vh;
+    font-size: 1vw;
+    border: 0 solid #111;
+    width: 10vw;
+    height: 6vh;
+    color: #E7E5DF;
+    background: transparent;
+    padding-bottom: 7vh;
+    overflow: hidden;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  h2{
+    transition: opacity 0.3s ease-in-out;
+  }
+  button:hover h2{
+    opacity: 0;
+  }
+  button:hover:before {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  button:before {
+    content: attr(data-hover);
+    position: absolute;
+    color: #2F243A;
+    background-color:  #E7E5DF;
+    /*top: 1.1em;*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    padding-top: 2vh;
+    /*letter-spacing: 3px;*/
+    font-weight: 800;
+    font-size: 1vw;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all .3s ease-in-out;
+  }
+  
+  button div {
+    text-transform: uppercase;
+    /*letter-spacing: 3px;*/
+    font-weight: 800;
+    font-size: .8em;
+    transition: all .3s ease-in-out;
+  }
+  
+  button:hover div {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+  
+  section.container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid #111;
+  }
+  

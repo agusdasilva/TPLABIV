@@ -1,0 +1,10 @@
+body{
+    background-color: #8534d6;
+    height: 80vh;
+    width: 86vw;
+    display: flex;
+    border: 0.21vh solid #111;
+    border-top: 0px;
+    border-left: 0px;
+    margin: 0;
+    }
