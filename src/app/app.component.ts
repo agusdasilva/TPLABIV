@@ -17,4 +17,5 @@ import { OptionsComponent } from './Componentes/options/options.component';
 })
 export class AppComponent {
   title = 'ProyectoVenta';
+  
 }
