@@ -1,12 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
-body{
-  display: flex;
-  flex-wrap: wrap; /* Permite que los componentes se muevan a la siguiente línea en pantallas pequeñas */
-  height: 100vh; /* Ocupa todo el alto de la pantalla */
-  width: 102vw; /* Ocupa todo el ancho de la pantalla */
-  margin: 0px
 
-}
 .opciones {
   background-color: #E7E5DF;
   width: 14vw;
@@ -77,6 +70,9 @@ button div {
 button:hover div {
   opacity: 0;
   transform: translate(100%, 0);
+}
+.active{
+  background-color: #2F243A;
 }
 
 section.container {

@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProveedoresService {
-  private url = 'http://localhost:3000/proveedores';
+  private url = 'http://localhost:4200/proveedores';
 
   constructor(private http: HttpClient) {}
 
