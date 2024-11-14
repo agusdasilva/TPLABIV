@@ -1,23 +1,13 @@
 <body>
-    <div class="header">
-        <app-header></app-header>
-    </div>
-<div class="opciones">
-<section class="container">
-<button (click)="showComponent('caja')" data-hover= "Click me"><h2>Caja</h2></button>
-<button data-hover= "Click me"><h2>Venta</h2></button>
-<button data-hover= "Click me"><h2>Compra</h2></button>
-<button (click)="showComponent('clientes')" data-hover= "Click me"><h2>Clientes</h2></button>
-<button data-hover= "Click me"><h2>Proveedores</h2></button>
-<button data-hover= "Click me"><h2>Opciones</h2></button>
-<button data-hover= "Click me"><h2>Salir</h2></button>
-</section>
-</div>
-<div *ngIf="activeComponent === 'caja'" class="componentes">
-    <app-caja></app-caja>
-</div>
-<div *ngIf="activeComponent === 'clientes'" class="componentes">
-    <app-clientes></app-clientes>
-</div>
-
+    <div class="opciones">
+        <section class="container">
+          <button (click)="navegarCaja()" routerLinkActive="active" data-hover="Click me"><h2>Caja</h2></button>
+          <button routerLink="/venta" routerLinkActive="active" data-hover="Click me"><h2>Venta</h2></button>
+          <button routerLink="/clientes" routerLinkActive="active" data-hover="Click me"><h2>Clientes</h2></button>
+          <button routerLink="/proveedores" routerLinkActive="active" data-hover="Click me"><h2>Proveedores</h2></button>
+          <button routerLink="/productos" routerLinkActive="active" data-hover="Click me"><h2>Productos</h2></button>
+          <button (click)="logout()" data-hover="Click me"><h2>Salir</h2></button>
+        </section>
+      </div>
+ 
 </body>

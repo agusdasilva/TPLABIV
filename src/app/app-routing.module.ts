@@ -7,13 +7,13 @@ import { ProductosComponent } from './Componentes/Opciones/productos/productos.c
 import { VentaComponent } from './Componentes/Opciones/venta/venta.component';
 
 const routes: Routes = [
-  { path: 'caja', component: CajaComponent },
+  { path: 'caja', component: CajaComponent }, 
   { path: 'clientes', component: ClientesComponent },
   { path: 'proveedores', component: ProveedoresComponent },
   { path: 'productos', component: ProductosComponent },
   { path: 'ventas', component: VentaComponent },
-  { path: '', redirectTo: '/caja', pathMatch: 'full' }, // Ruta por defecto
-  { path: '**', redirectTo: '/caja' } // Ruta de error o inexistente
+  { path: '', redirectTo: '/caja', pathMatch: 'full' }, // ruta x defecto provisional dsp capaz ponga una entrada fachera
+  { path: '**', redirectTo: '/caja' } //lo mismo de arriba
 ];
 
 @NgModule({

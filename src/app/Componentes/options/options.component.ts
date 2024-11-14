@@ -1,24 +1,19 @@
 import { Component } from '@angular/core';
-import { CajaComponent } from '../Opciones/caja/caja.component';
-import { HeaderComponent } from '../header/header.component';
-import { ClientesComponent } from '../Opciones/clientes/clientes.component';
-import { CommonModule } from '@angular/common';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-options',
-  standalone: true,
-  imports: [CajaComponent,
-    HeaderComponent,
-    ClientesComponent,
-    CommonModule
-  ],
   templateUrl: './options.component.html',
-  styleUrl: './options.component.css'
+  styleUrls: ['./options.component.css'] 
 })
 export class OptionsComponent {
-  activeComponent: string = '';
 
-  showComponent(componentId: string): void {
-    this.activeComponent = componentId;
+  constructor(private router: Router) { }
+
+  logout(): void {
+    this.router.navigate(['/']);
+  }
+  navegarCaja(){
+this.router.navigate(['/caja']);
   }
 }

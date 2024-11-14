@@ -6,8 +6,8 @@ import { catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductosService {
-  private url = 'http://localhost:3000/productos';
+export class CajaService {
+  private url = 'http://localhost:4200/caja';
 
   constructor(private http: HttpClient) {}
 
