@@ -1,0 +1,31 @@
+@import url(../../Assets/variables.css);
+header{
+    background-color: #E7E5DF;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border: 0.3vh solid #111;
+}
+h1{
+    margin-right: 57vw;
+   width: 20vw;
+   font-size: 2vw;
+}
+fieldset {
+    background-color: aliceblue;
+    width: 20vw;
+    height: auto; /* Deja que la altura se ajuste automáticamente */
+    margin-right: 2vw;
+    padding: 1vh; /* Añade un pequeño relleno interno */
+    border: 0.3vh solid #111;
+    box-sizing: border-box; /* Asegura que los márgenes y relleno se cuenten dentro del tamaño */
+}
+legend{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
