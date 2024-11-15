@@ -1,0 +1,13 @@
+{
+    "caja": [],
+    "clientes": [
+      { "id": 1, "nombre": "Cliente 1", "dni": "45993581", "contacto": "123-456-789", "nota": "Cliente frecuente" }
+    ],
+    "proveedores": [
+      { "id": 1, "nombre": "Proveedor 1", "dni": "45993582", "contacto": "987-654-321", "direccion": "Calle 123" }
+    ],
+    "ventas": [
+      { "id": 1, "clienteId": 1, "productos": ["Producto 1", "Producto 2"], "total": 200 }
+    ],
+    "productos": []
+  }
