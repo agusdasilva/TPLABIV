@@ -21,9 +21,11 @@ body {
 
 }
 
-
+.salir{
+  gap: 8vh;
+}
 button {
-  margin-top: 3vh;
+  margin-top: 4vh;
   font-size: 1vw;
   border: 0.3vh solid #111;
   width: 10vw;

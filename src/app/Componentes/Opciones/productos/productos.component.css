@@ -1,0 +1,273 @@
+.context-menu {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 8px;
+}
+
+.context-menu button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.context-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+
+body {
+  background-color: #2F243A;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  align-items: center; 
+  border: 0.21vh solid #111;
+  border-top: 0px;
+  border-left: 0px;
+  margin: 0;
+}
+.buscador-container {
+  position: relative;
+}
+
+.buscador {
+  width: 30.84vw; /* El input ocupa el 100% del contenedor */
+  font-size: 1.5vw;
+  border: 0.1vw solid #111;
+  background-color: #E7E5DF;
+  color: #111;
+  margin-top: 2vw;
+  height: 7.05vh;
+  padding-right: 5vw; /* Añadir espacio para el botón */
+}
+
+.buscador::placeholder {
+  color: #999;
+}
+
+/* Estilo del dropdown */
+.dropdown {
+  position: absolute;
+  width: 10vw;
+  height: 5vh;
+  margin-left: 26vw;
+}
+
+/* Botón del dropdown */
+.dropdown-button {
+  background: #E7E5DF;
+  border: 0.1vw solid #111;
+  cursor: pointer;
+  font-size: 1.5vw;
+  height: 7.5vh;
+  padding-bottom: 0;
+  margin-top: 2vw;
+  color: #111;
+  width: 7vw; 
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: #E7E5DF;
+  border: 0.21vh solid #ccc;
+  list-style: none;
+  margin: 0;
+  margin-left: 7vw;
+  padding: 0;
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  color: #111;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+/* Animación para el texto cuando se activa el dropdown */
+.dropdown-button.show:before {
+  content: attr(data-hover);
+  position: absolute;
+  color: #2F243A;
+  background-color:  #E7E5DF;
+  left: 0;
+  width: 7vw;
+  height: 100%;
+  text-transform: uppercase;
+  padding-top: 0.5vh;
+  font-weight: 800;
+  font-size: 1vw;
+  opacity: 1; /* Hacer visible cuando esté activo */
+  transform: translate(0, 0); /* Mover la animación cuando el estado show está activado */
+  transition: all .3s ease-in-out;
+}
+.dropdown-button:before {
+  content: attr(data-hover);
+  position: absolute;
+  color: #2F243A;
+  background-color:  #E7E5DF;
+  left: 0;
+  width: 7vw;
+  height: 100%;
+  text-transform: uppercase;
+  padding-top: 0.5vh;
+}
+.tablexnav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5vw;
+  gap: 0vh;
+}
+/*TABLA*/
+div {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: flex-start;
+  gap: 0; /* Espacio entre las filas */
+  
+  padding-left: 3vw;
+  color: white;
+}
+
+label, input {
+  font-size: 1.5vw;
+  width: 15vw;
+  height: 5vh;
+}
+label{
+  margin-top: 0vh;
+}
+input{
+  border: 0.21vh solid #111;
+}
+
+.row {
+  display: flex;
+  align-items: center; 
+  gap: 0vh; 
+  padding-top: 0vw;
+}
+
+table{
+    background-color: #2F243A;
+    width: 40vw;
+    height: 60vh;
+    margin-top: 0vh;
+    border: 0vh solid #111;
+    justify-content: center;
+}
+tr{
+    font-size: 2vw;
+    color: #E7E5DF;
+    background-color: #2F243A;
+    justify-content: left;
+}
+td{
+  font-size: 1.5vw;
+  justify-content: center;
+}
+
+tbody{
+  justify-content: flex-start;
+}
+/*BOTONES*/
+button {
+    margin-top: 0.5vh;
+    font-size: 1vw;
+    border: 0 solid #111;
+    width: 10vw;
+    height: 6vh;
+    color: #E7E5DF;
+    background: transparent;
+    padding-bottom: 7vh;
+    overflow: hidden;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  h2{
+    transition: opacity 0.3s ease-in-out;
+  }
+  button:hover h2{
+    opacity: 0;
+  }
+  button:hover:before {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  button:before {
+    content: attr(data-hover);
+    position: absolute;
+    color: #2F243A;
+    background-color:  #E7E5DF;
+    /*top: 1.1em;*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    padding-top: 0vh;
+    /*letter-spacing: 3px;*/
+    font-weight: 800;
+    font-size: 1vw;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all .3s ease-in-out;
+  }
+  .entradaBoton:before{
+      padding-top: 2vh;
+  }
+  button div {
+    text-transform: uppercase;
+    /*letter-spacing: 3px;*/
+    font-weight: 800;
+    font-size: .8em;
+    transition: all .3s ease-in-out;
+  }
+  
+  button:hover div {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+  
+  section.container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid #111;
+  }
+  
+  .changes{
+      color: #111;
+      margin-top: 0 0 0 0;
+      padding: 0 0 0 0;
+      padding-top: 0vh;
+  }
+  .changes::before{
+      font-size: 1.5vh;
+      padding-bottom: 3vh;
+  }

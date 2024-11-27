@@ -1,13 +1,70 @@
 {
-    "caja": [],
-    "clientes": [
-      { "id": 1, "nombre": "Cliente 1", "dni": "45993581", "contacto": "123-456-789", "nota": "Cliente frecuente" }
-    ],
-    "proveedores": [
-      { "id": 1, "nombre": "Proveedor 1", "dni": "45993582", "contacto": "987-654-321", "direccion": "Calle 123" }
-    ],
-    "ventas": [
-      { "id": 1, "clienteId": 1, "productos": ["Producto 1", "Producto 2"], "total": 200 }
-    ],
-    "productos": []
-  }
+  "caja": [
+    {
+      "id": "7526",
+      "fecha": "26/11/2024",
+      "hora": "01:29:31",
+      "tipo": "Agregar",
+      "monto": "1000",
+      "usuario": "UsuarioX",
+      "nota": ""
+    },
+    {
+      "id": "a783",
+      "fecha": "26/11/2024",
+      "hora": "01:45:41",
+      "tipo": "Agregar",
+      "monto": "1000",
+      "usuario": "UsuarioX",
+      "nota": ""
+    }
+  ],
+  "clientes": [
+    {
+      "id": "4c4c",
+      "Nombre": "ag",
+      "Apellido": "sda",
+      "Dni": "sda",
+      "Contacto": "dsa",
+      "nota": "asd"
+    }
+  ],
+  "proveedores": [
+    {
+      "id": "1",
+      "nombre": "Proveedor 1",
+      "dni": "45993582",
+      "contacto": "987-654-321",
+      "direccion": "Calle 123"
+    }
+  ],
+  "ventas": [
+    {
+      "id": "1",
+      "clienteId": 1,
+      "productos": [
+        "Producto 1",
+        "Producto 2"
+      ],
+      "total": 200
+    }
+  ],
+  "productos": [
+    {
+      "id": "cbac",
+      "producto": "Remera",
+      "cantidad": 10,
+      "color": "azul",
+      "talle": "XS",
+      "precio": 50000
+    },
+    {
+      "id": "e87c",
+      "producto": "Jean",
+      "cantidad": 8,
+      "color": "Verde",
+      "talle": "l",
+      "precio": 7500
+    }
+  ]
+}

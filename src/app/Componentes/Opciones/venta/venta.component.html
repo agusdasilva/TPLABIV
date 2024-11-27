@@ -1,1 +1,48 @@
-<p>venta works!</p>
+<div class="venta-container">
+    <!-- Panel izquierdo: Inputs para agregar al carrito -->
+    <div class="venta-panel-izquierdo">
+      <div class="row">
+        <label for="productoId">ID del Producto</label>
+        <input [(ngModel)]="productoId" type="text" id="productoId" placeholder="ID del Producto">
+      </div>
+      <div class="row">
+        <label for="cantidadProducto">Cantidad</label>
+        <input [(ngModel)]="cantidadProducto" type="number" id="cantidadProducto" placeholder="Cantidad">
+      </div>
+      <div class="row">
+        <label for="clienteId">ID del Cliente (opcional)</label>
+        <input [(ngModel)]="clienteId" type="text" id="clienteId" placeholder="ID del Cliente">
+      </div>
+      <button class="agregar-carrito" (click)="agregarAlCarrito()">Agregar al Carrito</button>
+    </div>
+  
+    <!-- Panel derecho: Tabla del carrito y detalles -->
+    <div class="venta-panel-derecho">
+      <table>
+        <thead>
+          <tr>
+            <th>ID Producto</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Cliente</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of carrito">
+            <td>{{ item.id }}</td>
+            <td>{{ item.producto }}</td>
+            <td>{{ item.cantidad }}</td>
+            <td>{{ item.precioTotal | currency }}</td>
+            <td>{{ item.cliente }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="venta-total">
+        <label for="total">Total:</label>
+        <input [(ngModel)]="precioTotal" type="text" id="total" readonly>
+      </div>
+      <button class="confirmar-venta" (click)="confirmarVenta()">Confirmar Venta</button>
+    </div>
+  </div>
+  
