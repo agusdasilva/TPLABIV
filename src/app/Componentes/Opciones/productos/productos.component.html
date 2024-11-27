@@ -1,1 +1,74 @@
-<p>productos works!</p>
+<body>
+  <div>
+    <div class="row">
+      <label for="Id">ID</label>
+      <input [(ngModel)]="id" class="id" type="text" id="Id">
+    </div>
+    <div class="row">
+      <label for="Producto">Producto</label>
+      <input [(ngModel)]="producto" class="producto" type="text" id="Producto">
+    </div>
+    <div class="row">
+      <label for="Cantidad">Cantidad</label>
+      <input [(ngModel)]="cantidad" class="cantidad" type="text" id="Cantidad">
+    </div>
+    <div class="row">
+      <label for="Color">Color</label>
+      <input [(ngModel)]="color" class="color" type="text" id="Color">
+    </div>
+    <div class="row">
+      <label for="Talle">Talle</label>
+      <input [(ngModel)]="talle" class="talle" type="text" id="Talle">
+    </div>
+    <div class="row">
+      <label for="Precio">Precio</label>
+      <input [(ngModel)]="precio" class="precio" type="text" id="Precio">
+      <button class="entradaBoton" (click)="agregarProducto()" data-hover="Confirmar">
+        <h2>Agregar</h2>
+      </button>
+    </div>
+  </div>
+
+  <div class="tablexnav">
+    <div class="buscador-container">
+      <input [(ngModel)]="filtro" (keyup)="buscarEnBaseDatos()" placeholder="Buscar en la caja..." type="text"
+        class="buscador">
+      <div class="dropdown">
+        <button class="dropdown-button" [class.show]="showDropdown" data-hover="Cambiando" (click)="toggleDropdown()">
+          {{ opcion }}</button>
+        <ul class="dropdown-menu" [class.show]="showDropdown">
+          <li *ngFor="let opcion of opciones" (click)="seleccionarOpcion(opcion)">
+            {{ opcion }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th (click)="ordenarTabla('id')">ID</th>
+          <th (click)="ordenarTabla('producto')">Producto</th>
+          <th (click)="ordenarTabla('cantidad')">Cantidad</th>
+          <th (click)="ordenarTabla('color')">Color</th>
+          <th (click)="ordenarTabla('talle')">Talle</th>
+          <th (click)="ordenarTabla('precio')">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of datos; let i = index" (dblclick)="mostrarOpciones($event, i)">
+          <td>{{ producto.id }}</td>
+          <td>{{ producto.producto }}</td>
+          <td>{{ producto.cantidad }}</td>
+          <td>{{ producto.color}}</td>
+          <td>{{ producto.talle }}</td>
+          <td>{{ producto.precio }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="context-menu" *ngIf="mostrarMenu" [style.top.px]="menuTop" [style.left.px]="menuLeft">
+      <button class="changes" (click)="eliminarFila(filaSeleccionada)" data-hover="imagen.jpg">Eliminar</button>
+      <button class="changes" (click)="editarFila(filaSeleccionada)" data-hover="imagen.jpg">Editar</button>
+    </div>
+  </div>
+</body>

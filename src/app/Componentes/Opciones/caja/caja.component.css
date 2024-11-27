@@ -9,47 +9,161 @@ body {
   border-left: 0px;
   margin: 0;
 }
+.buscador-container {
+  position: relative;
+}
+
+.buscador {
+  width: 30.84vw; /* El input ocupa el 100% del contenedor */
+  font-size: 1.5vw;
+  border: 0.1vw solid #111;
+  background-color: #E7E5DF;
+  color: #111;
+  margin-top: 2vw;
+  height: 7.05vh;
+  padding-right: 5vw; /* Añadir espacio para el botón */
+}
+
+.buscador::placeholder {
+  color: #999;
+}
+
+/* Estilo del dropdown */
+.dropdown {
+  position: absolute;
+  width: 10vw;
+  height: 5vh;
+  margin-left: 26vw;
+}
+
+/* Botón del dropdown */
+.dropdown-button {
+  background: #E7E5DF;
+  border: 0.1vw solid #111;
+  cursor: pointer;
+  font-size: 1.5vw;
+  height: 7.5vh;
+  padding-bottom: 0;
+  margin-top: 0;
+  color: #111;
+  width: 7vw; 
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: #E7E5DF;
+  border: 0.21vh solid #ccc;
+  list-style: none;
+  margin: 0;
+  margin-left: 7vw;
+  padding: 0;
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  color: #111;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+/* Animación para el texto cuando se activa el dropdown */
+.dropdown-button.show:before {
+  content: attr(data-hover);
+  position: absolute;
+  color: #2F243A;
+  background-color:  #E7E5DF;
+  left: 0;
+  width: 7vw;
+  height: 100%;
+  text-transform: uppercase;
+  padding-top: 0.5vh;
+  font-weight: 800;
+  font-size: 1vw;
+  opacity: 1; /* Hacer visible cuando esté activo */
+  transform: translate(0, 0); /* Mover la animación cuando el estado show está activado */
+  transition: all .3s ease-in-out;
+}
+.dropdown-button:before {
+  content: attr(data-hover);
+  position: absolute;
+  color: #2F243A;
+  background-color:  #E7E5DF;
+  left: 0;
+  width: 7vw;
+  height: 100%;
+  text-transform: uppercase;
+  padding-top: 0.5vh;
+}
+.tablexnav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5vw;
+  gap: 0vh;
+}
+/*TABLA*/
+div {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: flex-start;
+  gap: 0; /* Espacio entre las filas */
+  padding: 2vw;
+  padding-left: 3vw;
+  color: white;
+}
+
+label, input {
+  font-size: 1.5vw;
+  width: 15vw;
+  height: 5vh;
+}
+label{
+  margin-top: 0vh;
+}
+input{
+  border: 0.21vh solid #111;
+}
+
+.row {
+  display: flex;
+  align-items: center; 
+  gap: 0vh; 
+}
 
 table{
-    background-color: white;
+    background-color: #2F243A;
     width: 40vw;
     height: 60vh;
-    margin-left: 13vw;
-    margin-top: 10vh;
-    border: 0.21vh solid #111;
+    margin-top: 0vh;
+    border: 0vh solid #111;
     justify-content: center;
 }
 tr{
     font-size: 2vw;
+    color: #E7E5DF;
+    background-color: #2F243A;
+    justify-content: left;
+}
+td{
+  font-size: 1.5vw;
+  justify-content: center;
 }
 
-div {
-    display: flex;
-    flex-direction: column; /* Coloca los elementos en una columna */
-    align-items: flex-start;
-    gap: 0; /* Espacio entre las filas */
-    padding: 2vw;
-    color: white;
+tbody{
+  justify-content: flex-start;
 }
-
-label, input {
-    font-size: 1.5vw;
-    width: 15vw;
-    height: 5vh;
-}
-label{
-    margin-top: 0vh;
-}
-input{
-    border: 0.21vh solid #111;
-}
-
-.row {
-    display: flex;
-    align-items: center; /* Alinea el label y el input en el centro vertical */
-    gap: 0vh; /* Espacio entre label y input */
-}
-
+/*BOTONES*/
 button {
     margin-top: 0.5vh;
     font-size: 1vw;

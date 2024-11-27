@@ -1,14 +1,14 @@
-/* Aseguramos que el body ocupe toda la pantalla */
+
 body {
   display: flex;
-  flex-direction: column; /* El header arriba y el contenido abajo */
-  height: 100vh; /* Altura completa de la pantalla */
+  flex-direction: column; 
+  height: 100vh; 
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-/* Estilos para el header */
+
 header {
   width: 100vw;
   height: 20vh; 
@@ -18,24 +18,23 @@ header {
   border: 0.3vh solid #111;
 }
 
-/* Contenedor principal que contiene app-options y router-outlet */
+
 .main-container {
-  display: flex; /* Distribuye app-options y router-outlet de forma horizontal */
-  height: 80vh; /* Ocupa el 90% de la altura restante después del header */
-  width: 100vw; /* Ocupa el ancho completo */
+  display: flex; 
+  height: 80vh; 
+  width: 100vw; 
 }
 
-/* Estilo para app-options */
+
 app-options {
-  width: 20vw; /* Ocupa el 20% del ancho de la pantalla */
-  height: 80vh; /* Ocupa toda la altura disponible */
+  width: 20vw; 
+  height: 80vh;
   box-sizing: border-box;
 }
 
-/* Estilo para el contenido del router-outlet */
 router-outlet {
   width: 80vw;
-  height: 80vh; /* Ocupa toda la altura */
+  height: 80vh; 
   box-sizing: border-box;
   overflow-y: hidden; 
 }

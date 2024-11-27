@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: 'proveedores', component: ProveedoresComponent },
   { path: 'productos', component: ProductosComponent },
   { path: 'ventas', component: VentaComponent },
-  { path: '', redirectTo: '/caja', pathMatch: 'full' }, // ruta x defecto provisional dsp capaz ponga una entrada fachera
-  { path: '**', redirectTo: '/caja' } //lo mismo de arriba
+  { path: '', redirectTo: '/caja', pathMatch: 'full' }, 
+  { path: '**', redirectTo: '/caja' } 
 ];
 
 @NgModule({

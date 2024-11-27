@@ -1,36 +1,61 @@
 <body>
-    <div>
-        <div class="row">
-            <label for="Entrada">Agregar dinero</label>
-            <input [(ngModel)]="entrada" class="entrada" type="text" id="Entrada">
-            <button (click)="agregarFila('Agregar')" data-hover= "Confirmar"><h2>Agregar</h2></button>
-        </div>
-        <div class="row">
-            <label for="Salida">Quitar dinero</label>
-            <input [(ngModel)]="salida" class="salida" type="text" id="Salida">
-            <button (click)="agregarFila('Salida')" data-hover= "Confirmar"><h2>Retirar</h2></button>
-        </div>
-        <div class="row">
-            <label for="Nota">Nota(Opcional)</label>
-            <input [(ngModel)]="nota" class="nota" type="text" id="Nota">
-            <button data-hover="Confirmar"><h2>Nota</h2></button>
-        </div>
+  <div>
+    <div class="row">
+      <label for="Entrada">Agregar dinero</label>
+      <input [(ngModel)]="entrada" class="entrada" type="text" id="Entrada">
+      <button class="entradaBoton" (click)="agregarFila('Agregar')" data-hover="Confirmar">
+        <h2>Agregar</h2>
+      </button>
     </div>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Tipo</th>
-                <th>Monto</th>
-                <th>Usuario</th>
-                <th>Nota</th>
-            </tr>
-        </thead>
-        <tbody id="tablebody">
-            <tr *ngFor="let fila of datos| slice:0:limiteFilas" >
-            <td *ngFor="let dato of fila">{{ dato }}</td>
-            </tr>
-        </tbody>
+    <div class="row">
+      <label for="Salida">Quitar dinero</label>
+      <input [(ngModel)]="salida" class="salida" type="text" id="Salida">
+      <button class="salidaBoton" (click)="agregarFila('Salida')" data-hover="Confirmar">
+        <h2>Retirar</h2>
+      </button>
+    </div>
+    <div class="row">
+      <label for="Nota">Nota(Opcional)</label>
+      <input [(ngModel)]="nota" class="nota" type="text" id="Nota">
+    </div>
+  </div>
+
+  <div class="tablexnav">
+    <div class="buscador-container">
+      <input [(ngModel)]="filtro" (keyup)="buscarEnBaseDatos()" placeholder="Buscar en la caja..." type="text"
+        class="buscador">
+      <div class="dropdown">
+        <button class="dropdown-button" [class.show]="showDropdown" data-hover="Cambiando" (click)="toggleDropdown()">
+          {{ opcion }}</button>
+        <ul class="dropdown-menu" [class.show]="showDropdown">
+          <li *ngFor="let opcion of opciones" (click)="seleccionarOpcion(opcion)">
+            {{ opcion }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th (click)="ordenarTabla('fecha')">Fecha</th>
+          <th (click)="ordenarTabla('hora')">Hora</th>
+          <th (click)="ordenarTabla('tipo')">Tipo</th>
+          <th (click)="ordenarTabla('monto')">Monto</th>
+          <th (click)="ordenarTabla('usuario')">Usuario</th>
+          <th (click)="ordenarTabla('nota')">Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fila of datosLimitados">
+          <td>{{ fila.fecha }}</td>
+          <td>{{ fila.hora }}</td>
+          <td>{{ fila.tipo }}</td>
+          <td>{{ fila.monto }}</td>
+          <td>{{ fila.usuario }}</td>
+          <td>{{ fila.nota }}</td>
+        </tr>
+      </tbody>
     </table>
+  </div>
 </body>

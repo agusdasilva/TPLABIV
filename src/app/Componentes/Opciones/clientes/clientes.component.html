@@ -1,3 +1,76 @@
 <body>
-    
-</body>
+    <div>
+      <div class="row">
+        <label for="Id">ID</label>
+        <input [(ngModel)]="id" class="id" type="text" id="Id">
+      </div>
+      <div class="row">
+        <label for="Nombre">Nombre</label>
+        <input [(ngModel)]="nombre" class="nombre" type="text" id="Nombre">
+      </div>
+      <div class="row">
+        <label for="Apellido">Apellido</label>
+        <input [(ngModel)]="apellido" class="apellido" type="text" id="Apellido">
+      </div>
+      <div class="row">
+        <label for="Dni">DNI</label>
+        <input [(ngModel)]="dni" class="dni" type="text" id="Dni">
+      </div>
+      <div class="row">
+        <label for="Contacto">Contacto</label>
+        <input [(ngModel)]="contacto" class="contacto" type="text" id="Contacto">
+      </div>
+      <div class="row">
+        <label for="Nota">Nota</label>
+        <input [(ngModel)]="nota" class="nota" type="text" id="Nota">
+        <button class="entradaBoton" (click)="agregarCliente()" data-hover="Confirmar">
+          <h2>Agregar</h2>
+        </button>
+      </div>
+    </div>
+  
+    <div class="tablexnav">
+      <div class="buscador-container">
+        <input [(ngModel)]="filtro" (keyup)="buscarEnBaseDatos()" placeholder="Buscar en la lista de clientes..." type="text"
+          class="buscador">
+        <div class="dropdown">
+          <button class="dropdown-button" [class.show]="showDropdown" data-hover="Cambiando" (click)="toggleDropdown()">
+            {{ opcion }}</button>
+          <ul class="dropdown-menu" [class.show]="showDropdown">
+            <li *ngFor="let opcion of opciones" (click)="seleccionarOpcion(opcion)">
+              {{ opcion }}
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <table>
+        <thead>
+          <tr>
+            <th (click)="ordenarTabla('id')">ID</th>
+            <th (click)="ordenarTabla('Nombre')">Nombre</th>
+            <th (click)="ordenarTabla('Apellido')">Apellido</th>
+            <th (click)="ordenarTabla('Dni')">DNI</th>
+            <th (click)="ordenarTabla('Contacto')">Contacto</th>
+            <th (click)="ordenarTabla('nota')">Nota</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of datos; let i = index" 
+        (dblclick)="mostrarOpciones($event, i)">
+            <td>{{ cliente.id }}</td>
+            <td>{{ cliente.Nombre }}</td>
+            <td>{{ cliente.Apellido }}</td>
+            <td>{{ cliente.Dni }}</td>
+            <td>{{ cliente.Contacto }}</td>
+            <td>{{ cliente.nota }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="context-menu" *ngIf="mostrarMenu" [style.top.px]="menuTop" [style.left.px]="menuLeft">
+        <button class="changes" (click)="eliminarFila(filaSeleccionada)" data-hover="imagen.jpg">Eliminar</button>
+        <button class="changes" (click)="editarFila(filaSeleccionada)" data-hover="imagen.jpg">Editar</button>
+      </div>
+    </div>
+  </body>
+  

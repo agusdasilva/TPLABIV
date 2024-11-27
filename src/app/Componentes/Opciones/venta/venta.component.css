@@ -1,0 +1,38 @@
+.venta-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .venta-panel-izquierdo, .venta-panel-derecho {
+    width: 48%;
+  }
+  
+  .row {
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .venta-total {
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
